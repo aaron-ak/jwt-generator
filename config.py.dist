@@ -1,0 +1,27 @@
+import time
+
+#iat = issued at
+#nbf = not before
+#exp = expiration time
+
+currentTime = int(time.time())
+
+iat = currentTime
+nbf = currentTime
+exp = currentTime + 5000
+
+
+# JWT Payload
+payload_data = {
+  "test": "Test",
+  "sub": "Test",
+  "iat": + iat,
+  "nbf": + nbf, 
+  "exp": + exp
+}
+
+# Key File
+pathToKey = "pathToKey.key"
+
+# URL where jwt should be sent to
+serviceUrl = "https://example.com/api/resource"
