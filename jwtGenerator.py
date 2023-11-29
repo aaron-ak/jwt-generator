@@ -3,7 +3,7 @@ from jwt import (
     jwk_from_dict,
     jwk_from_pem,
 )
-from config import *
+from jwtGeneratorConfig import *
 
 #https://github.com/GehirnInc/python-jwt
 #https://auth0.com/blog/how-to-handle-jwt-in-python/
@@ -16,6 +16,12 @@ with open(pathToKey, 'rb') as fh:
 instance = JWT()
 compact_jws = instance.encode(payload_data, signing_key, alg='RS256')
 
+print("##### JWT #####")
 print(compact_jws)
+print("##### JWT #####")
+print("\n")
 print("validate token here: https://jwt.io/")
-print("curl -H \"Authorization: Bearer " + compact_jws + "\" " + serviceUrl)
+print("\n")
+print("##### CURL COMMAND #####")
+print("curl -L -H \"Authorization: Bearer " + compact_jws + "\" " + serviceUrl)
+print("##### CURL COMMAND #####")
