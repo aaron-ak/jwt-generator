@@ -8,7 +8,7 @@ This repository contains a Python script that demonstrates how to work with JSON
 ```bash
 pip install -r requirements.txt
 ```
-3. Copy `config.py.dist` to `config.py` and set the right config. 
+3. Copy `jwtGeneratorConfig.py.dist` to `jwtGeneratorConfig.py` and set the right config. 
 
 ## Run the script using Python
 ```bash
